@@ -13,11 +13,11 @@ public class ContadorLetras {
         for (int i = 0; i < palabra.length(); i++) {
             char letra = palabra.charAt(i);
 
-            // Verificamos si es vocal
+            
             if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
                 vocales++;
             } else {
-                // Como no hay números ni símbolos, si no es vocal, es consonante
+                
                 consonantes++;
             }
         }
