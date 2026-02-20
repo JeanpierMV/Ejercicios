@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class ContadorLetras {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Introduce una palabra: ");
+        String palabra = teclado.next();
+
+        int vocales = 0;
+        int consonantes = 0;
+
+        for (int i = 0; i < palabra.length(); i++) {
+            char letra = palabra.charAt(i);
+
+            // Verificamos si es vocal
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                vocales++;
+            } else {
+                // Como no hay números ni símbolos, si no es vocal, es consonante
+                consonantes++;
+            }
+        }
+
+        System.out.println("Vocales: " + vocales);
+        System.out.println("Consonantes: " + consonantes);
+        
+        teclado.close();
+    }
+}
